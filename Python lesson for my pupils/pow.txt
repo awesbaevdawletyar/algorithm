@@ -1,0 +1,19 @@
+# import math
+# a,b=map(int,input().split())
+# print(int(math.pow(2,math.pow(2,a))%b))
+
+x=int(input())
+def f(x):
+    if x<4:
+        f=1
+    else:
+        f1=1
+        f2=1
+        f3=1
+        for i in range(4,x+1):
+            f=f3+2*f2+3*f1
+            f1,f2,f3=f2,f3,f
+            f=f%944161110001
+    return f
+a=f(x)
+print(a)
